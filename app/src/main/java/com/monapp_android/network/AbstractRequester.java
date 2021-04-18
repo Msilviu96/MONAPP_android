@@ -1,5 +1,7 @@
 package com.monapp_android.network;
 
+import com.monapp_android.application.MONAPP;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,7 +11,7 @@ import java.net.ProtocolException;
 
 
 public abstract class AbstractRequester {
-    protected static final String link = "http://192.168.1.155:8000/rest/";
+    protected static final String link = MONAPP.ADDRESS + "/rest/";
     protected String path;
 
     public AbstractRequester(String path) {

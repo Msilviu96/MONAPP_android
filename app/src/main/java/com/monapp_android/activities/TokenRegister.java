@@ -54,9 +54,9 @@ public class TokenRegister extends AppCompatActivity {
                         .build();
                 AndroidNetworking.initialize(getApplicationContext(), okHttpClient);
 
-                AndroidNetworking.get("http://192.168.1.155:8000/rest/token/{token}")
+                AndroidNetworking.get(MONAPP.ADDRESS + "/rest/token/{token}")
                         .addPathParameter("token", tokenText)
-                        .setTag("test")
+                        .setTag("token_activation")
                         .setPriority(Priority.MEDIUM)
                         .build()
                         .getAsJSONObject(new JSONObjectRequestListener() {

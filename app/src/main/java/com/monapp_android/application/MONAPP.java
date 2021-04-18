@@ -10,8 +10,11 @@ import com.monapp_android.DTOs.ChildDTO;
 
 public class MONAPP extends Application {
     public static final String CHANNEL_ID = "bsckgroundServiceChannel";
+    public static final String ADDRESS = "http://192.168.1.103:8000";
+
     private static Context applicationContext;
     private static ChildDTO child;
+
 
     @Override
     public void onCreate() {
